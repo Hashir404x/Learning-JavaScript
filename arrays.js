@@ -61,4 +61,13 @@ temp = arr.filter(isOdd)
 // find, it is just like the "filter" method, but it only returns the first element which fulfils the condition
 temp = arr.find(isOdd)
 
+// reduce, it reduces all the array elements by applying provided operation, into 1 output, we can also provide a starting value e.g here I provided 0
+arr = [1, 2, 13, 4, 5]
+const total = arr.reduce((res, current) => res + current, 0)
+const largestElement = arr.reduce((res, current) => {
+  if (current > res) return current
+  else return res
+}, 0)
+console.log(largestElement)
+
 // there are many more useful array methods available, i can check and learn from mdn docs when needed
